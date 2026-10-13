@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Reads the secret key from Vercel environment variable
-PROXY_SECRET_KEY = os.environ.get("freellmapi-01262c0df92253e89d91de4cb9865eabbe1cce879a27e4a6")
+PROXY_SECRET_KEY = os.environ.get("PROXY_SECRET_KEY")
 
 @app.before_request
 def check_bearer_token():
